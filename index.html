@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Photography</title>
+    <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700|Lato:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <h3 class="sectionTitle sectionTitle--small">Photography</h2>
+        <div class="wrapper">
+            <h3 class="sectionTitle sectionTitle--small sectionTitle--header">Photography</h3>
         <nav>   
             <ul class="nav">
                 <li class="nav__link"><a href="#">Home</a></li>
@@ -20,21 +22,22 @@
                 <li class="nav__link"><a href="#">About Us</a></li>
             </ul>
             <section class="header">
-                <h1 class="header__title">Welcome</h1>
+                <h1 class="sectionTitle header__title">Welcome</h1>
                 <p class="header__text">To My Photography Website</p>
                 <button class="btn">Start</button>
             </section>
         </nav>
-
+    </div>
     </header>
 
-    <div class="wrapper">
-        <h2 class="sectionTitle sectionTitle--large">Welcome to Photography</h2>
+    <div class="wrapper wrapper--center">
+        <h2 class="sectionTitle sectionTitle--large">Welcome to <span class="sectionTitle--blue">Photography</span></h2>
         <p class="wrapper__text">Suspendisse convallis turpis sem, nec tincidunt mauris tincidunt sed. Nunc vulputate feli s eu nunc moletie molestie vel tempus purus. Donec sed tellus mi. Fusce tincidunt tudin arcu, nec fringilla ex he rerit eget. Maecenas fringilla neque eu est tincon. Vivamus consequa variusimperdiet. Mauris laoreet risus pharetra ollis.</p>
         <button class="btn">More</button>
     </div>
 
-    <section class="services">
+    <section class="container container--olive">
+        <h2 class="sectionTitle sectionTitle--large">Services</h2>
         <div class="wrapper">
             <ul class="card">
                 <li class="card__title"><i class="fas fa-camera"></i></li>
@@ -44,140 +47,151 @@
 
             <ul class="card">
                 <li class="card__logo"><i class="fas fa-leaf"></i></li>
-                <li class="card__title"><h2 class="sectionTitle sectionTitle--small">Portraits</h2></li>
+                <li class="card__title"><h2 class="sectionTitle sectionTitle--small">Scenery</h2></li>
                 <li class="card__text">Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed id lobor ligula. Phasellus gravida ante nd metus viverra, id.</li>
             </ul>
 
             <ul class="card">
-                <li class="card__logo"><i class="fas fa-camera"></i></li>
-                <li class="card__title"><h3 class="sectionTitle sectionTitle--small">Portraits</h2></li>
+                <li class="card__logo"><i class="fas fa-heart"></i></li>
+                <li class="card__title"><h3 class="sectionTitle sectionTitle--small">Weddings</h2></li>
                 <li class="card__text">Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed id lobor ligula. Phasellus gravida ante nd metus viverra, id.</li>
-            </ul>
-
-            <ul class="card">
-                <li class="card_logo"><i class="fas fa-heart"></i></li>
-                <li class="card__title"><h3 class="sectionTitle sectionTitle--small">Portraits</h2></li>
-                <li class="card__text"></li>
             </ul>
         </div>
     </section>
 
-    <section class="testimonials">
-        <div class="wrapper">
+    <h2 class="sectionTitle sectionTitle--large">Testimonials</h2>
+    <section class="container--left container">
+        <div class="wrapper container--left">
             <figure>
                 <img src="assets/image-2.jpeg" alt="girl smiling in a field">
             </figure>
-                <h3 class="sectionTitle sectionTitle--small">Kate Sampson</h3>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id lob rtis ligula. Phasellus gravida ante eleifend metus viverra, id tincid nibh vulputate. Donec sem odio, condimentum non aliquet vel,</p>
+            <section class="wrapper--left">
+                <h3 class="sectionTitle sectionTitle--small sectionTitle--left">Kate Sampson</h3>
+                <p class="paragraphText--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id lob rtis ligula. Phasellus gravida ante eleifend metus viverra, id tincid nibh vulputate. Donec sem odio, condimentum non aliquet vel,</p>
+            </section>
         </div>
     </section>
 
     <section class="gallery">
-        <div class="wrapper">
             <figure class="gallery__item"><img src="assets/image-3.jpeg" alt="girl swaying her hair in water"></figure>
-            <figure class="gallery__item"><img src="assets/image-4.jpeg" alt="beautiful house sitting on an island"></figure>
-            <figure class="gallery__item"><img src="assets/image-5.jpeg" alt="boats on a lush green shore"><figure>
+            <figure class="gallery__item"><img src="assets/image-4.jpeg" alt="beautiful house sitting on an island class"></figure>
+            <figure class="gallery__item"><img src="assets/image-5.jpeg" alt="boats on a lush green shore"></figure>
             <figure class="gallery__item"><img src="assets/image-6.jpeg" alt="houses on the side of a shore"></figure>
-        </div>
     </section>
 
-    <section class="happyClients">
-        <div class="wrapper">
-            <h2 class="sectionTitle sectionTitle--large">Happy Clients</h2>
-            <img src="assets/image-7.jpeg" alt="girl in yellow sweater">
+    <section class="container">
+        <h2 class="sectionTitle sectionTitle--large">Happy Clients</h2>
+        <div class="wrapper wrapper--center container">
+            <figure><img src="assets/image-7.jpeg" alt="girl in yellow sweater"></figure>
             <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies, leo gravida la cinia aliquet, augue nisi scelerisque velit, vitae ornare lectus lorem nec odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
             <p>~Mary Jane~</p>
         </div>
     </section>
 
-    <section class="latestNews">
+    <section class="container container--lightGrey">
+        <h2 class="sectionTitle sectionTitle--large">Latest News</h2>
         <div class="wrapper">
-            <h2 class="sectionTitle sectionTitle--large">Latest News</h2>
             <ul class="card">
-                <li class=""><img src="assets/image-8.jpeg" alt="shores of Italy lined with houses"></li>
-                <li class="">My Trip to Italy</li>
-                <li clas="">Read More  >></li>
+                <li class="card__item"><img src="assets/image-8.jpeg" alt="shores of Italy lined with houses"></li>
+                <li class="card__item">My Trip to Italy</li>
+                <li class="card__item card__item--blue">Read More  >></li>
             </ul>
 
             <ul class="card">
-                <li class=""><img src="assets/image-9.jpeg" alt="Front of a house in Greece"></li>
-                <li class="">My Greece Photoshoot</li>
-                <li class="">Read More  >></li>
+                <li class="card__item"><img src="assets/image-9.jpeg" alt="Front of a house in Greece"></li>
+                <li class="card__item">My Greece Photoshoot</li>
+                <li class="card__item card__item--blue">Read More  >></li>
             </ul>
 
             <ul class="card">
-                <li class=""><img src="assets/image-10.jpeg" alt="Back of a girl's head"></li>
-                <li class="">Travelling with your Partner</li>
-                <li class="">Read More  >></li>
+                <li class="card__item"><img src="assets/image-10.jpeg" alt="Back of a girl's head"></li>
+                <li class="card__item">Travelling with your Partner</li>
+                <li class="card__item card__item--blue">Read More  >></li>
             </ul>
         </div>
     </section>
 
-    <section class="question">
-        <div class="wrapper">
+    <section class="container container--pink">
             <h2 class="sectionTitle sectionTitle--large">Ask A Question</h2>
-            <p class="">Your Message</p>
+            <p class="wrapper__text--border">Your Message</p>
             <button class="btn">Send</button>
-        </div>
     </section>
     
-    <section class="largeGallery">
-        <div class="wrapper">
+    <div class="wrapper">
+    <section class="container--left">
            <ul class="galleryLinks">
-               <li>Latest Shoots</li>
-               <li>All</li>
-               <li>Weddings</li>
-               <li>Scenery</li>
-               <li>Portraits</li>
+               <li class="galleryLinks__item">Latest Shoots</li>
+               <li class="galleryLinks__item">All</li>
+               <li class="galleryLinks__item">Weddings</li>
+               <li class="galleryLinks__item">Scenery</li>
+               <li class="galleryLinks__item">Portraits</li>
            </ul>
-           <ul>
-               <figure class="gallery__item">
+    </section>
+           <ul class="card">
+               <figure class="card__item">
                    <img src="assets/image-11.jpeg" alt="">
                 </figure>
-               <figure class="gallery__item">
+               <figure class="card__item">
                    <img src="assets/image-12.jpeg" alt="">
                 </figure>
-               <figure class="gallery__item">
+               <figure class="card__item">
                    <img src="assets/image-13.jpeg" alt="">
                 </figure>
-               <figure class="gallery__item">
+               <figure class="card__item">
                    <img src="assets/image-14.jpeg" alt="">
                 </figure>
            </ul>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <footer>
-        <section class="contact">
-            <h3 class="sectionTitle sectionTitle--small">Contact</h3>
-            <li class=""><i class="far fa-envelope"></i>info@delicate.com</li>
-            <li class=""><i class="fas fa-phone"></i>123 456-7890</li>
-            <li class=""><i class="fas fa-map-marker-alt"></i>Toronto, Ontario</li>
-            <li class="">
-                <form action="sendEmail.php" method="POST" name="myForm">
-                    <input type="email" name="emailAddress" placeholder="your email">
-                    <i class="fas fa-paper-plane"></i>
-                </form>
-            </li>
-        </section>
-
-        <section class="aboutUs">
-            <h3 class="sectionTitle sectionTitle--small">About Us</h3>
-            <p class="">We are creative and modern web studio. Newest technologies it’s about us. We keep up with time, your web site will contain all of the best and modern trends. We are making web since 2005. Huge experience - is a best helper.</p>
-        </section>
-
-        <section class="instagram">
-            <figure><img src="assets/image-15.jpeg" alt="a boat in water"></figure>
-            <figure><img src="assets/image-16.jpeg" alt="an orange house"></figure>
-            <figure><img src="assets/image-17.jpeg" alt="a seaside town"></figure>
-            <figure><img src="assets/image-18.jpeg" alt="a bike on a street"></figure>
-            <figure><img src="assets/image-19.jpeg" alt="boats by the sea"></figure>
-            <figure><img src="assets/image-20.jpeg" alt="street lined with houses"></figure>
-            <figure><img src="assets/image-21.jpeg" alt="an old-school red car"></figure>
-            <figure><img src="assets/image-22.jpeg" alt="some colourful homes along a street"></figure>
-        </section>
-
+        <div class="wrapper">
+            <section class="container--footer">
+                <ul>
+                    <h3 class="sectionTitle sectionTitle--small paragraphText--left">Contact</h3>
+                    <li class=""><i class="far fa-envelope icon--small"></i>info@delicate.com</li>
+                    <li class=""><i class="fas fa-phone icon--small"></i>123 456-7890</li>
+                    <li class=""><i class="fas fa-map-marker-alt icon--small"></i>Toronto, Ontario</li>
+                    <li class="">
+                        <form action="sendEmail.php" method="POST" name="myForm">
+                            <input type="email" name="emailAddress" placeholder="your email">
+                            <i class="fas fa-paper-plane icon--small"></i>
+                        </form>
+                    </li>
+                </ul>
+            </section>
         
+
+            <section class="container">
+                <h3 class="sectionTitle sectionTitle--small">About Us</h3>
+                <p class="">We are creative and modern web studio. Newest technologies it’s about us. We keep up with time, your web site will contain all of the best and modern trends. We are making web since 2005. Huge experience - is a best helper.</p>
+            </section>
+
+            <section class="instagram">
+                <figure><img src="assets/image-15.jpeg" alt="a boat in water"></figure>
+                <figure><img src="assets/image-16.jpeg" alt="an orange house"></figure>
+                <figure><img src="assets/image-17.jpeg" alt="a seaside town"></figure>
+                <figure><img src="assets/image-18.jpeg" alt="a bike on a street"></figure>
+                <figure><img src="assets/image-19.jpeg" alt="boats by the sea"></figure>
+                <figure><img src="assets/image-20.jpeg" alt="street lined with houses"></figure>
+                <figure><img src="assets/image-21.jpeg" alt="an old-school red car"></figure>
+                <figure><img src="assets/image-22.jpeg" alt="some colourful homes along a street"></figure>
+            </section>
+
+            <section class="nav nav__footer">
+                <div class="wrapper">
+                    <ul class="nav nav__footer">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Demos</li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <p>2017 All rights resrved ©</p>
+        </div>
     </footer>
 </body>
 </html>
