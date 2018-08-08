@@ -6,6 +6,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
 }
 
 header {
@@ -26,6 +27,15 @@ i {
     padding-left: 0;
 }
 
+.fab {
+    font-size: 2rem;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
 nav h3 {
     width: 20%;
 }
@@ -44,7 +54,9 @@ nav h3 {
 .wrapper--center {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    align-items: center;
+    text-align: center;
+    // width: 50%;
 }
 
 .wrapper--column {
@@ -58,11 +70,13 @@ nav h3 {
     line-height: 1.56;
 }
 
-.wrapper__text--border {
+.container__text--border {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     width: 70%;
     padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .sectionTitle {
@@ -98,7 +112,7 @@ nav h3 {
 }
 
 .wrapper h3 {
-    border: 2px solid blue;
+    margin-top: 0;
 }
 
 .nav {
@@ -109,13 +123,18 @@ nav h3 {
     flex-flow: row wrap;
     justify-content: flex-end;
     font-weight: 600;
-    border: 2px solid red;
+}
+
+nav {
+    width: 90%;
 }
 
 .nav__link a {
     text-decoration: none;
     color:#2a2a2a;
     padding: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .icon--small {
@@ -130,19 +149,34 @@ nav h3 {
     text-transform: uppercase;
     text-align: left;
     margin-top: 20%;
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
 }
 
 .header__title {
     font-size: 3.5rem;
 }
+
+.headerNavigation {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    flex: 1 0 100%;
+}
+
 .btn {
     background-color: transparent;
     text-align: center;
-    border-radius: 1.6rem;
-    padding: 3px;
+    border-radius: 1.5rem;
+    padding: 5px;
     margin-bottom: 100px;
     width: 125px;
     border: solid black 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
 }
 
 .btn:hover {
@@ -156,7 +190,7 @@ nav h3 {
     list-style: none;
     text-align: center;
     flex-wrap: wrap;
-    margin: 25px;
+    margin: 20px;
 }
 
 .card--large {
@@ -193,6 +227,10 @@ nav h3 {
     text-align: left;
 }
 
+.paragraphText--italic {
+    font-style: italic;
+}
+
 .sectionTitle--left {
     text-align: left;
 }
@@ -202,6 +240,7 @@ nav h3 {
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .container--left {
@@ -255,7 +294,6 @@ img {
     align-items: flex-start;
     width: 100%;
 }
-
 .galleryLinks {
     background-color: #606060;
     color: white;
@@ -272,6 +310,16 @@ img {
     padding: 25px 15px;
 }
 
+.galleryLinks__item a {
+    color: white;
+}
+
+.galleryLinks__item a:hover {
+    color: dodgerblue;
+    transition: 0.2s all ease;
+}
+
+
 .container--footer {
     width: calc(100% / 3);
     display: flex;
@@ -281,11 +329,33 @@ img {
 .container--instagram {
     display: flex;
     flex-flow: row wrap;
+    position: relative;
 }
 
 .container--instagram figure {
     width: calc(100% / 4);
     padding: 5px;
+}
+
+.container--social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    position: absolute;
+    right: -50%;
+}
+.container--social i {
+    font-size: 1.6rem;
+}
+
+.container--social a {
+    color: black;
+}
+
+.fab a:hover {
+    color: palevioletred;
+    transition: 0.2s all ease;
 }
 
 form {
@@ -295,9 +365,10 @@ form {
 }
 
 button {
-    border: none;
+    border-left : none;
     border-top: 1px solid black;
     border-right: 1px solid black;
+    border-bottom: 1px solid black;
     background-color: transparent;
 }
 
@@ -309,6 +380,173 @@ input {
 .nav__footer {
     display: block;
     flex-direction: column;
-    flex-wrap: nowrap;
 }
 
+.photography {
+    display: flex;
+    width: 100%;  
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.nav__link--footer {
+    padding: 20px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    background: black;
+    width: 100%;
+    font-weight: 700;
+}
+
+.card__item a {
+    color: #285d64;
+}
+
+.card__item a:hover {
+    transition: 0.2s all ease;
+    color: dodgerblue;
+}
+
+// ===============MEDIA QUERIES=================
+
+@media (max-width: 668px) {
+
+
+    .header {
+        top: 100%;
+    }
+
+    .wrapper--left {
+        width: 80%;
+        margin-right: 30px;
+    }
+
+    .wrapper__text {
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .container--left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .galleryLinks {
+        width: 105%;
+    }
+    
+    .container--footer {
+        align-items: center;
+        width: 90%;
+    }
+
+    .testimonial--figure {
+        width: 60%;
+    }
+
+    .headerNavigation {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .header__title {
+        text-align: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .header__text {
+        color: white;
+        
+    }
+
+    .header .btn {
+        color: white;
+        border: 2px solid white;
+    }
+
+    .header .btn:hover {
+        background-color: red;
+    }
+
+    .wrapper {
+        padding-top: 0;
+        position: relative;
+    }
+
+    .card__item {
+        text-align: center;
+    }
+
+    .aboutUs {
+        display: none;
+    }
+
+    .container--social {
+        flex-direction: row;
+        position: relative;
+        justify-content: flex-start;
+
+    }
+
+    .nav {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-top: 3%;
+        font-size: 2rem;
+    }
+
+    .nav a:hover {
+        color: gold;
+        transition: 0.2s all ease;
+    }
+
+    .nav__link a{
+        color: white;
+    }
+
+    .sectionTitle--left {
+        text-align: center;
+    }
+
+    .nav__link--footer a {
+        color: black;
+    }
+
+    .nav__footer {
+        flex-direction: column;
+    }
+
+
+}

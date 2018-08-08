@@ -12,6 +12,7 @@
 <body>
     <header>
         <div class="wrapper wrapper--header">
+        <div class="headerNavigation">
             <h3 class="sectionTitle sectionTitle--small sectionTitle--header">Photography</h3>
             <nav>   
                 <ul class="nav">
@@ -20,13 +21,15 @@
                     <li class="nav__link"><a href="#">Blog</a></li>
                     <li class="nav__link"><a href="#">Bookings</a></li>
                     <li class="nav__link"><a href="#">About Us</a></li>
-                    </ul>
+                </ul>
+            </nav>
+        </div>
                 <section class="header">
                     <h1 class="sectionTitle header__title">Welcome</h1>
                     <p class="header__text">To My Photography Website</p>
                     <button class="btn">Start</button>
                 </section>
-            </nav>
+
         </div>
     </header>
 
@@ -47,7 +50,7 @@
 
             <ul class="card">
                 <li class="card__logo"><i class="fas fa-leaf"></i></li>
-                <li class="card__title"><h2 class="sectionTitle sectionTitle--small">Scenery</h2></li>
+                <li class="card__title"><h3 class="sectionTitle sectionTitle--small">Scenery</h3></li>
                 <li class="card__text">Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed id lobor ligula. Phasellus gravida ante nd metus viverra, id.</li>
             </ul>
 
@@ -62,7 +65,7 @@
     <h2 class="sectionTitle sectionTitle--large">Testimonials</h2>
     <section class="container container--left">
         <div class="wrapper container--left">
-            <figure>
+            <figure class="testimonial--figure">
                 <img src="assets/image-2.jpeg" alt="girl smiling in a field">
             </figure>
             <section class="wrapper--left">
@@ -81,10 +84,10 @@
 
     <section class="container">
         <h2 class="sectionTitle sectionTitle--large">Happy Clients</h2>
-        <div class="wrapper wrapper--center container">
+        <div class="wrapper wrapper--center container happyClients">
             <figure><img src="assets/image-7.jpeg" alt="girl in yellow sweater"></figure>
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies, leo gravida la cinia aliquet, augue nisi scelerisque velit, vitae ornare lectus lorem nec odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-            <p>~Mary Jane~</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies, leo gravida la cinia aliquet, augue nisi scelerisque velit, vitae ornare lectus lorem nec odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            <p class="paragraphText--italic">~Mary Jane~</p>
         </div>
     </section>
 
@@ -94,37 +97,37 @@
             <ul class="card">
                 <li class="card__item"><img src="assets/image-8.jpeg" alt="shores of Italy lined with houses"></li>
                 <li class="card__item">My Trip to Italy</li>
-                <li class="card__item card__item--blue">Read More  >></li>
+                <li class="card__item card__item--blue"><a href="#">Read More  >></a></li>
             </ul>
 
             <ul class="card">
                 <li class="card__item"><img src="assets/image-9.jpeg" alt="Front of a house in Greece"></li>
                 <li class="card__item">My Greece Photoshoot</li>
-                <li class="card__item card__item--blue">Read More  >></li>
+                <li class="card__item card__item--blue"><a href="#">Read More  >></a></li>
             </ul>
 
             <ul class="card">
                 <li class="card__item"><img src="assets/image-10.jpeg" alt="Back of a girl's head"></li>
                 <li class="card__item">Travelling with your Partner</li>
-                <li class="card__item card__item--blue">Read More  >></li>
+                <li class="card__item card__item--blue"><a href="#">Read More  >></a></li>
             </ul>
         </div>
     </section>
 
     <section class="container container--pink">
             <h2 class="sectionTitle sectionTitle--large">Ask A Question</h2>
-            <p class="wrapper__text--border">Your Message</p>
+            <p class="container__text--border">Your Message</p>
             <button class="btn">Send</button>
     </section>
     
     <div class="wrapper">
         <section class="container--left">
             <ul class="galleryLinks">
-                <li class="galleryLinks__item">Latest Shoots</li>
-                <li class="galleryLinks__item">All</li>
-                <li class="galleryLinks__item">Weddings</li>
-                <li class="galleryLinks__item">Scenery</li>
-                <li class="galleryLinks__item">Portraits</li>
+                <li class="galleryLinks__item"><a href="#"></a>Latest Shoots</a></li>
+                <li class="galleryLinks__item"><a href="#">All</a></li>
+                <li class="galleryLinks__item"><a href="#">Weddings</a></li>
+                <li class="galleryLinks__item"><a href="#">Scenery</a></li>
+                <li class="galleryLinks__item"><a href="#">Portraits</a></li>
             </ul>
         </section>
             <ul class="card--large">
@@ -185,29 +188,34 @@
                     <figure><img src="assets/image-20.jpeg" alt="street lined with houses"></figure>
                     <figure><img src="assets/image-21.jpeg" alt="an old-school red car"></figure>
                     <figure><img src="assets/image-22.jpeg" alt="some colourful homes along a street"></figure>
+                <div class="container--social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
                 </div>
-            </section>
 
-            <section class="nav__footer">
+            </section>
+             </div>
+
+            <div class="photography">
+            <section class="container--footer">
                     <h3 class="sectionTitle sectionTitle--small sectionTitle--header">Photography</h3>
             </section>
 
-
-
-
-
-                    <!-- <ul class="nav__footer">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Demos</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">About Us</a></li>
+                    <ul class="nav__footer">
+                        <li class="nav__link nav__link--footer"><a href="#">Home</a></li>
+                        <li class="nav__link nav__link--footer"><a href="#">Demos</a></li>
+                        <li class="nav__link nav__link--footer"><a href="#">Blog</a></li>
+                        <li class="nav__link nav__link--footer"><a href="#">Pages</a></li>
+                        <li class="nav__link nav__link--footer aboutUs"><a href="#">About Us</a></li>
                     </ul>
                 </div>
+                
             </section>
-
+        </div>
+        <section class="copyright">
             <p>2017 All rights resrved ©</p>
-        </div> -->
-    </footer>
+        </section>
 </body>
 </html>
+
