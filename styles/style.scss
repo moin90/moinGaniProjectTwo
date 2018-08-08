@@ -26,6 +26,10 @@ i {
     padding-left: 0;
 }
 
+nav h3 {
+    width: 20%;
+}
+
 .wrapper {
     display: flex;
     max-width: 900px;
@@ -33,11 +37,14 @@ i {
     padding-top: 25px;
 }
 
+.wrapper--header {
+    display: flex;
+}
+
 .wrapper--center {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-bottom: 50px;
 }
 
 .wrapper--column {
@@ -55,17 +62,24 @@ i {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     width: 70%;
+    padding: 10px;
 }
 
 .sectionTitle {
     text-transform: uppercase;
     font-family: 'Catamaran', sans-serif;
     padding: 0; 
+    margin: 0;
+    margin-top: 20px;
     text-align: center;
 }
 
 .sectionTitle--small {
     font-size: 2rem;
+}
+
+.sectionTitle--left {
+    text-align: left;
 }
 
 .sectionTitle--blue {
@@ -83,32 +97,39 @@ i {
     background-color: #bec884;
 }
 
+.wrapper h3 {
+    border: 2px solid blue;
+}
 
 .nav {
     text-transform: uppercase;
     list-style: none;
     text-decoration: none;
     display: flex;
+    flex-flow: row wrap;
     justify-content: flex-end;
     font-weight: 600;
+    border: 2px solid red;
 }
 
 .nav__link a {
     text-decoration: none;
-    color: #2a2a2a;
+    color:#2a2a2a;
     padding: 10px;
 }
 
 .icon--small {
     font-size: 1.6rem;
 }
+//  <------------HEADER STYLES -------------->
 
 .header {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     text-transform: uppercase;
     text-align: left;
+    margin-top: 20%;
 }
 
 .header__title {
@@ -117,21 +138,40 @@ i {
 .btn {
     background-color: transparent;
     text-align: center;
-    border-radius: 1.05px;
-    padding: 5px;
+    border-radius: 1.6rem;
+    padding: 3px;
     margin-bottom: 100px;
+    width: 125px;
+    border: solid black 1px;
+}
+
+.btn:hover {
+    background-color: dodgerblue;
+    transition: 0.2s all ease;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     text-align: center;
-    flex: 1 0;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+.card--large {
+    display: flex;
     flex-wrap: wrap;
 }
 
 .card__item {
     text-align: left;
     line-height: 1.56;
+}
+
+.card__item--large {
+    width: calc(50% - 20px);
+    margin: 10px;
 }
 
 .card__item--blue {
@@ -143,6 +183,10 @@ i {
 .sectionTitle--large {    
     font-size: 4rem;
     margin-bottom: 0;
+}
+
+.sectionTitle--header {
+    display: inline-block;
 }
 
 .paragraphText--left {
@@ -157,12 +201,14 @@ i {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .container--left {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 50px;
+    width: 55%;
 }
 
 .container--olive {
@@ -207,6 +253,7 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
 }
 
 .galleryLinks {
@@ -214,7 +261,7 @@ img {
     color: white;
     text-transform: uppercase;
     text-align: center;
-    padding: 20px;
+    padding: 20px 20px 50px;
     margin-right: 15px;
     font-weight: 700;
     display: flex;
@@ -226,9 +273,42 @@ img {
 }
 
 .container--footer {
+    width: calc(100% / 3);
     display: flex;
     flex-direction: column;
+}
+
+.container--instagram {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container--instagram figure {
+    width: calc(100% / 4);
+    padding: 5px;
+}
+
+form {
+    display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    width: 100%;
+}
+
+button {
+    border: none;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background-color: transparent;
+}
+
+input {
+    border: 1px solid black;
+    border-right: none;
+}
+
+.nav__footer {
+    display: block;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
