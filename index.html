@@ -85,8 +85,8 @@
         </div>
     </section>
 
-    <h2 class="sectionTitle sectionTitle--large">Testimonials</h2>
     <section class="container container--left">
+            <h2 class="sectionTitle sectionTitle--large">Testimonials</h2>
         <div class="wrapper container--left">
             <figure class="testimonial--figure">
                 <img src="assets/image-2.jpeg" alt="girl smiling in a field">
@@ -109,7 +109,7 @@
         <h2 class="sectionTitle sectionTitle--large">Happy Clients</h2>
         <div class="wrapper wrapper--center container happyClients">
             <figure><img src="assets/image-7.jpeg" alt="girl in yellow sweater"></figure>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies, leo gravida la cinia aliquet, augue nisi scelerisque velit, vitae ornare lectus lorem nec odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            <p class="wrapper__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies, leo gravida la cinia aliquet, augue nisi scelerisque velit, vitae ornare lectus lorem nec odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
             <p class="paragraphText--italic">~Mary Jane~</p>
         </div>
     </section>
@@ -235,6 +235,29 @@
         <section class="copyright">
             <p>2017 All rights reserved ©</p>
         </section>
+
+        <script src='https://code.jquery.com/jquery-3.2.1.min.js'
+        integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+        <script>
+        
+        $(document).ready(function () {
+
+                $('a').smoothScroll({
+                    speed: 800
+                });
+
+                $('.hamburger').on('click', function () {
+                    $('.menu').addClass('show');
+                });
+
+                $('.exit-responsive').on('click', function () {
+                    $('.menu').removeClass('show');
+                });
+        });
+
+        </script>
+
 </body>
 </html>
 
