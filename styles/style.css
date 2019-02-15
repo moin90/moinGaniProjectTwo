@@ -140,9 +140,49 @@ body {
   font-family: 'Lato', sans-serif; }
 
 header {
-  background-image: url(../assets/image-1.jpeg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../assets/image-1.jpeg) fixed no-repeat;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/image-1.jpeg) fixed no-repeat;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/image-1.jpeg) fixed no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/image-1.jpeg) fixed no-repeat;
   background-size: cover;
   height: 100vh; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 auto;
+  position: absolute;
+  right: 11%;
+  top: 30%; }
+
+.header__title {
+  font-size: 3.5rem; }
+
+.header__text {
+  margin-top: 0; }
+
+.headerNavigation {
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%; }
 
 ul {
   list-style: none;
@@ -151,8 +191,7 @@ ul {
 
 i {
   font-size: 5rem;
-  padding: 15px;
-  padding-left: 0; }
+  padding: 15px 0; }
 
 .fab {
   font-size: 2rem;
@@ -168,14 +207,22 @@ nav h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding-top: 25px; }
+  padding: 50px 0; }
 
 .wrapper--header {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
 
 .wrapper--center {
   display: -webkit-box;
@@ -201,7 +248,8 @@ nav h3 {
 
 .wrapper__text {
   text-align: center;
-  line-height: 1.56; }
+  line-height: 1.56;
+  width: 60%; }
 
 .container__text--border {
   border-top: 1px solid black;
@@ -272,43 +320,14 @@ nav {
   padding: 10px;
   font-weight: 700;
   text-transform: uppercase; }
+  .nav__link a:hover {
+    color: white;
+    -webkit-transition: 0.2s all ease;
+    -o-transition: 0.2s all ease;
+    transition: 0.2s all ease; }
 
 .icon--small {
   font-size: 1.6rem; }
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  text-transform: uppercase;
-  text-align: left;
-  margin-top: 20%;
-  position: absolute;
-  bottom: 15%;
-  right: 15%; }
-
-.header__title {
-  font-size: 3.5rem; }
-
-.headerNavigation {
-  width: 100%;
-  height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 100%;
-  flex: 1 0 100%; }
 
 .btn {
   background-color: transparent;
@@ -358,8 +377,8 @@ nav {
     color: #285d64; }
 
 .card__item--large {
-  width: calc(50% - 20px);
-  margin: 10px; }
+  width: calc(50% - 10px);
+  margin: 5px; }
 
 .card__item--blue {
   color: #285d64;
@@ -520,9 +539,8 @@ img {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  width: 100%;
   position: absolute;
-  right: -50%; }
+  right: -40px; }
 
 .container--social i {
   font-size: 1.6rem; }
@@ -535,6 +553,20 @@ img {
   -webkit-transition: 0.2s all ease;
   -o-transition: 0.2s all ease;
   transition: 0.2s all ease; }
+
+.fa-leaf:hover, .fa-heart:hover, .fa-camera:hover {
+  -webkit-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease; }
+
+.fa-leaf:hover {
+  color: green; }
+
+.fa-camera:hover {
+  color: blue; }
+
+.fa-heart:hover {
+  color: red; }
 
 form {
   display: -webkit-box;
@@ -629,11 +661,6 @@ input {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  .card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
   .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
