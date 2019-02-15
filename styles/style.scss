@@ -10,9 +10,14 @@ body {
 }
 
 header {
-    background-image: url(../assets/image-1.jpeg);
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../assets/image-1.jpeg) fixed no-repeat;
     background-size: cover;
     height: 100vh;
+    font-weight: 700;
+
+    .btn {
+        width: 50%;
+    }
 }
 
 ul {
@@ -21,9 +26,12 @@ ul {
     padding: 0;
 }
 
+
+    // ICON STYLES //
+
 i {
     font-size: 5rem;
-    padding: 15px;
+    padding: 15px 0;
     padding-left: 0;
 }
 
@@ -32,8 +40,53 @@ i {
     color: black;
 }
 
+.fa-bars {
+    position: fixed;
+    top: -2%;
+    right: 4%;
+    color: black;
+    z-index: 1000;
+}
+
+.fa-heart:hover, .fa-leaf:hover, .fa-camera:hover {
+    transition: 0.2s all ease;
+}
+
+.fa-heart:hover {
+    color: red;
+}
+
+.fa-leaf:hover {
+    color: green;
+}
+
+.fa-camera:hover {
+    color: blue;
+}
+
+.fa-times {
+    padding: 0;
+}
+
+.fa-envelope, .fa-phone, .fa-map-marker-alt {
+    padding-right: 15px;
+}
+
+    // ICON STYLES END HERE //
+
 a {
     text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.hamburger,
+.exit-responsive {
+	display: none;
+}
+
+.show.menu {
+	display: block;
 }
 
 nav h3 {
@@ -44,7 +97,7 @@ nav h3 {
     display: flex;
     max-width: 900px;
     margin: 0 auto;
-    padding-top: 25px;
+    padding: 45px 0;
 }
 
 .wrapper--header {
@@ -56,7 +109,11 @@ nav h3 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    // width: 50%;
+    padding: 80px 0;
+    
+    p {
+        width: 70%;
+    }
 }
 
 .wrapper--column {
@@ -72,19 +129,21 @@ nav h3 {
 
 .container__text--border {
     border-top: 1px solid black;
+    border-left: none;
     border-bottom: 1px solid black;
-    width: 70%;
+    text-align: center;
     padding: 10px;
     text-transform: uppercase;
     font-weight: 700;
+    width: 100%;
 }
 
 .sectionTitle {
     text-transform: uppercase;
     font-family: 'Catamaran', sans-serif;
     padding: 0; 
-    margin: 0;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 0;
     text-align: center;
 }
 
@@ -135,6 +194,11 @@ nav {
     padding: 10px;
     font-weight: 700;
     text-transform: uppercase;
+
+    &:hover {
+        color: white;
+        transition: 0.2s all ease;
+    }
 }
 
 .icon--small {
@@ -150,8 +214,9 @@ nav {
     text-align: left;
     margin-top: 20%;
     position: absolute;
-    bottom: 15%;
+    bottom: 30%;
     right: 15%;
+    font-size: 2rem;
 }
 
 .header__title {
@@ -160,7 +225,6 @@ nav {
 
 .headerNavigation {
     width: 100%;
-    height: 10%;
     display: flex;
     align-items: center;
     flex: 1 0 100%;
@@ -171,16 +235,16 @@ nav {
     text-align: center;
     border-radius: 1.5rem;
     padding: 5px;
-    margin-bottom: 100px;
+    margin-top: 20px;
     width: 125px;
     border: solid black 1px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
 }
 
 .btn:hover {
-    background-color: dodgerblue;
+    background-color: gold;
     transition: 0.2s all ease;
 }
 
@@ -190,7 +254,11 @@ nav {
     list-style: none;
     text-align: center;
     flex-wrap: wrap;
-    margin: 20px;
+    margin-right: 75px;
+
+    &:nth-of-type(3) {
+        margin-right: 0;
+    }
 }
 
 .card--large {
@@ -201,11 +269,35 @@ nav {
 .card__item {
     text-align: left;
     line-height: 1.56;
+
+    a:hover {
+        transition: 0.2s all ease;
+        color: black;
+    }
 }
 
 .card__item--large {
-    width: calc(50% - 20px);
-    margin: 10px;
+    width: calc((100% / 2) - 10px);
+    position: relative;
+    margin: 5px;
+
+    &:hover .gallery__item--hover {
+        display: block;
+        transition: 0.5s all ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            color: gold;
+            transition: 0.2s all ease;
+        }
+    }
 }
 
 .card__item--blue {
@@ -213,10 +305,14 @@ nav {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.6rem;
+
+    a {
+        color: #285d64;
+    }
 }
+
 .sectionTitle--large {    
     font-size: 4rem;
-    margin-bottom: 0;
 }
 
 .sectionTitle--header {
@@ -225,6 +321,7 @@ nav {
 
 .paragraphText--left {
     text-align: left;
+    width: 80%;
 }
 
 .paragraphText--italic {
@@ -237,21 +334,28 @@ nav {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     flex-wrap: wrap;
     width: 100%;
+    padding: 80px 0;
 }
 
 .container--left {
     display: flex;
-    justify-content: flex-start;
-    margin-bottom: 50px;
-    width: 55%;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+
+    p {
+        width: 90%;
+    }
 }
 
 .container--olive {
     background-color: #bec884;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrapper--left {
@@ -262,17 +366,32 @@ nav {
     line-height: 1.56;
 }
 
-.container--grey {
-    background-color: #fff;
+.paragraphText--left {
+    width: 100%;
 }
+
 
 .container--lightGrey {
     background-color: #f5f3f3;
+    padding-bottom: 50px;
 }
 
 .container--pink {
     background-color: #f2b094;
 }
+
+.container__content--pink {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+
+    input {
+        background-color: #f2b094;
+        padding: 15px;
+    }
+}
+
 .gallery {
     display: flex;
     flex-flow: row wrap;
@@ -285,77 +404,114 @@ img {
 }
 
 .gallery__item {
+    display: block;
     width: calc(100% / 4);
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &:hover .gallery__item--hover {
+        display: block;
+        transition: 0.5s all ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.gallery__item--hover {
+    background: rgba(42, 42, 42, 0.8);
+    display: none;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    h3 {
+        text-transform: uppercase;
+    }
 }
 
 .container--left {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
 }
 .galleryLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     background-color: #606060;
     color: white;
     text-transform: uppercase;
     text-align: center;
-    padding: 20px 20px 50px;
     margin-right: 15px;
     font-weight: 700;
-    display: flex;
-    flex-direction: column;
-}
 
-.galleryLinks__item {
-    padding: 25px 15px;
-}
+    .galleryLinks__item {
+        padding: 25px;
+        width: 100%;
 
-.galleryLinks__item a {
-    color: white;
-}
+        &:hover {
+            background-color: black;
+        }
 
-.galleryLinks__item a:hover {
-    color: dodgerblue;
-    transition: 0.2s all ease;
-}
+        a {
+            color: white;
 
+            &:hover {
+                color: gold;
+                transition: 0.2s all ease;
+            }
+        }
+    }
+}
 
 .container--footer {
     width: calc(100% / 3);
     display: flex;
     flex-direction: column;
-}
+    padding-top: 15px;
 
-.container--instagram {
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-}
+    .container--instagram {
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
 
-.container--instagram figure {
-    width: calc(100% / 4);
-    padding: 5px;
-}
+        figure {
+            width: calc(100% / 4);
+            padding: 5px;
+        }
+    }
 
-.container--social {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-    position: absolute;
-    right: -50%;
-}
-.container--social i {
-    font-size: 1.6rem;
-}
+    .container--social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        right: -100px;
 
-.container--social a {
-    color: black;
-}
+        i {
+            font-size: 1.6rem;
+        }
 
-.fab a:hover {
-    color: palevioletred;
-    transition: 0.2s all ease;
+        a {
+            color: black;
+        }
+
+        .fab:hover {
+            color: palevioletred;
+            transition: 0.2s all ease;
+        }
+    }
 }
 
 form {
@@ -375,6 +531,7 @@ button {
 input {
     border: 1px solid black;
     border-right: none;
+    padding: 10px;
 }
 
 .nav__footer {
@@ -410,22 +567,66 @@ input {
     font-weight: 700;
 }
 
-.card__item a {
-    color: #285d64;
-}
-
-.card__item a:hover {
-    transition: 0.2s all ease;
-    color: dodgerblue;
-}
-
 // ===============MEDIA QUERIES=================
 
 @media (max-width: 668px) {
 
+    header {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../assets/image-1.jpeg) fixed no-repeat 50% top left;
+    }
+
+    .sectionTitle--header {
+        display: none;
+    }
 
     .header {
-        top: 100%;
+        top: 50%;
+        max-width: 70%;
+        color: white;
+    }
+
+    .hamburger,
+	.exit-responsive {
+		display: block;
+		font-size: 25px;
+	}
+
+	.menu {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: gold;
+        color: white;
+        width: 100%;
+        height: 100vh;
+        z-index: 100;
+
+	}
+
+	.menu ul {
+		display: flex;
+        flex-direction: column;
+	}
+
+	.menu ul a {
+		font-size: 2rem;
+		text-align: center;
+		width: 100%;
+		padding: 25px;
+	}
+
+    .btn {
+        margin-bottom: 10px;
+        color: white;
+        background-color: black;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
     }
 
     .wrapper--left {
@@ -436,6 +637,10 @@ input {
     .wrapper__text {
         text-align: left;
         font-size: 1.2rem;
+    }
+
+    .wrapper--center p {
+        width: 90%;
     }
 
     .container {
@@ -449,14 +654,32 @@ input {
         align-items: center;
     }
 
+    i {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .card {
         flex-direction: column;
+        margin-bottom: 15px;
+
+        &:nth-of-type(3) {
+            margin-bottom: 0;
+        }
     }
 
     .wrapper {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .gallery {
+        flex-direction: column;
+
+        .gallery__item {
+            width: 100%;
+        }
     }
 
     .galleryLinks {
@@ -470,6 +693,7 @@ input {
 
     .testimonial--figure {
         width: 60%;
+        flex: 1;
     }
 
     .headerNavigation {
@@ -482,26 +706,15 @@ input {
     .header__title {
         text-align: center;
         justify-content: center;
-        color: white;
-    }
-
-    .header__text {
-        color: white;
-        
-    }
-
-    .header .btn {
-        color: white;
-        border: 2px solid white;
-    }
-
-    .header .btn:hover {
-        background-color: red;
     }
 
     .wrapper {
         padding-top: 0;
         position: relative;
+    }
+
+    .card {
+        margin-right: 0;
     }
 
     .card__item {
@@ -512,18 +725,28 @@ input {
         display: none;
     }
 
-    .container--social {
+    .container--footer  .container--social {
         flex-direction: row;
-        position: relative;
-        justify-content: flex-start;
+        justify-content: space-around;
+        position: initial;
 
+        i {
+            font-size: 3rem;
+        }
+    }
+
+    .container--olive {
+        padding-bottom: 25px;
+    }
+
+    .container--left {
+        padding-left: 0;
     }
 
     .nav {
         flex-direction: column;
         text-align: center;
         align-items: center;
-        margin-top: 3%;
         font-size: 2rem;
     }
 
@@ -532,21 +755,19 @@ input {
         transition: 0.2s all ease;
     }
 
-    .nav__link a{
-        color: white;
-    }
-
     .sectionTitle--left {
         text-align: center;
     }
 
-    .nav__link--footer a {
-        color: black;
-    }
-
     .nav__footer {
         flex-direction: column;
+
+        .nav__link--footer {
+            padding: 10px;
+
+            a {
+                color: black;
+            }
+        }
     }
-
-
 }

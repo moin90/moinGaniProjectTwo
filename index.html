@@ -11,35 +11,38 @@
 </head>
 <body>
     <header>
-        <div class="wrapper wrapper--header">
-        <div class="headerNavigation">
-            <h3 class="sectionTitle sectionTitle--small sectionTitle--header">Photography</h3>
-            <nav>   
-                <ul class="nav">
-                    <li class="nav__link"><a href="#">Home</a></li>
-                    <li class="nav__link"><a href="#">Gallery</a></li>
-                    <li class="nav__link"><a href="#">Blog</a></li>
-                    <li class="nav__link"><a href="#">Bookings</a></li>
-                    <li class="nav__link"><a href="#">About Us</a></li>
-                </ul>
-            </nav>
-        </div>
-                <section class="header">
-                    <h1 class="sectionTitle header__title">Welcome</h1>
-                    <p class="header__text">To My Photography Website</p>
-                    <button class="btn">Start</button>
-                </section>
+        <div class="wrapper">
+            <section class="headerNavigation">
+                <h3 class="sectionTitle sectionTitle--small sectionTitle--header">Photography</h3>
+                <p class="hamburger"><a href="#"><i class="fas fa-bars"></i></a></p>
+                <nav class="menu">   
+                    <ul class="nav">
+                        <li class="exit-responsive"><i class="fas fa-times"></i></li>
+                        <li class="nav__link"><a href="#">Home</a></li>
+                        <li class="nav__link"><a href="#gallery">Gallery</a></li>
+                        <li class="nav__link"><a href="#">Blog</a></li>
+                        <li class="nav__link"><a href="#aboutUs">Bookings</a></li>
+                        <li class="nav__link"><a href="#aboutUs">About Us</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="header">
+                <h1 class="sectionTitle header__title">Welcome</h1>
+                <p class="header__text">To My Photography Website</p>
+                <a href="#welcome"><button class="btn">Start</button></a>
+            </section>
 
         </div>
     </header>
 
-    <div class="wrapper wrapper--center">
+    <div class="wrapper wrapper--center" id="welcome">
         <h2 class="sectionTitle sectionTitle--large">Welcome to <span class="sectionTitle--blue">Photography</span></h2>
         <p class="wrapper__text">Suspendisse convallis turpis sem, nec tincidunt mauris tincidunt sed. Nunc vulputate feli s eu nunc moletie molestie vel tempus purus. Donec sed tellus mi. Fusce tincidunt tudin arcu, nec fringilla ex he rerit eget. Maecenas fringilla neque eu est tincon. Vivamus consequa variusimperdiet. Mauris laoreet risus pharetra ollis.</p>
-        <button class="btn">More</button>
+        <a href="#services"><button class="btn">More</button></a>
     </div>
 
-    <section class="container container--olive">
+    <section class="container container--olive" id="services">
         <h2 class="sectionTitle sectionTitle--large">Services</h2>
         <div class="wrapper">
             <ul class="card">
@@ -55,7 +58,7 @@
             </ul>
 
             <ul class="card">
-                <li class="card__logo"><i class="fas fa-heart"></i></li>
+                <li class="card__logo hvr-icon-pulse-grow"><i class="fas fa-heart hvr-icon-pulse-grow"></i></li>
                 <li class="card__title"><h3 class="sectionTitle sectionTitle--small">Weddings</h2></li>
                 <li class="card__text">Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed id lobor ligula. Phasellus gravida ante nd metus viverra, id.</li>
             </ul>
@@ -63,23 +66,41 @@
     </section>
 
     <h2 class="sectionTitle sectionTitle--large">Testimonials</h2>
-    <section class="container container--left">
-        <div class="wrapper container--left">
+        <div class="wrapper">
             <figure class="testimonial--figure">
                 <img src="assets/image-2.jpeg" alt="girl smiling in a field">
             </figure>
-            <section class="wrapper--left">
+            <section class="container--left">
                 <h3 class="sectionTitle sectionTitle--small sectionTitle--left">Kate Sampson</h3>
                 <p class="paragraphText--left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id lob rtis ligula. Phasellus gravida ante eleifend metus viverra, id tincid nibh vulputate. Donec sem odio, condimentum non aliquet vel,</p>
             </section>
         </div>
-    </section>
 
-    <section class="gallery">
-            <figure class="gallery__item"><img src="assets/image-3.jpeg" alt="girl swaying her hair in water"></figure>
-            <figure class="gallery__item"><img src="assets/image-4.jpeg" alt="beautiful house sitting on an island class"></figure>
-            <figure class="gallery__item"><img src="assets/image-5.jpeg" alt="boats on a lush green shore"></figure>
-            <figure class="gallery__item"><img src="assets/image-6.jpeg" alt="houses on the side of a shore"></figure>
+    <section class="gallery" id="gallery">
+            <figure class="gallery__item"><img src="assets/image-3.jpeg" alt="girl swaying her hair in water">
+                <figcaption class="gallery__item--hover">
+                    <h3>Sample Shoot</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </figcaption>
+            </figure>
+            <figure class="gallery__item"><img src="assets/image-4.jpeg" alt="beautiful house sitting on an island class">
+                <figcaption class="gallery__item--hover">
+                    <h3>Sample Shoot</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </figcaption>
+            </figure>
+            <figure class="gallery__item"><img src="assets/image-5.jpeg" alt="boats on a lush green shore">
+            <figcaption class="gallery__item--hover">
+                <h3>Sample Shoot</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </figcaption>
+            </figure>
+            <figure class="gallery__item"><img src="assets/image-6.jpeg" alt="houses on the side of a shore">
+            <figcaption class="gallery__item--hover">
+                <h3>Sample Shoot</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </figcaption>
+            </figure>
     </section>
 
     <section class="container">
@@ -115,43 +136,52 @@
     </section>
 
     <section class="container container--pink">
-            <h2 class="sectionTitle sectionTitle--large">Ask A Question</h2>
-            <p class="container__text--border">Your Message</p>
-            <button class="btn">Send</button>
-    </section>
+            <section class="container__content--pink wrapper--center wrapper">
+                <h2 class="sectionTitle sectionTitle--large">Ask A Question</h2>
+                <input type="text" class="container__text--border" placeholder="Your Message">
+                <button class="btn">Send</button>
+            </section>
+        </section>
+    </div>
     
     <div class="wrapper">
-        <section class="container--left">
-            <ul class="galleryLinks">
-                <li class="galleryLinks__item"><a href="#"></a>Latest Shoots</a></li>
+        <ul class="galleryLinks">
+                <li class="galleryLinks__item"><a href="#">Latest Shoots</a></li>
                 <li class="galleryLinks__item"><a href="#">All</a></li>
                 <li class="galleryLinks__item"><a href="#">Weddings</a></li>
                 <li class="galleryLinks__item"><a href="#">Scenery</a></li>
                 <li class="galleryLinks__item"><a href="#">Portraits</a></li>
-            </ul>
-        </section>
-            <ul class="card--large">
-                <li class="card__item card__item--large">
-                <figure>
+          </ul>
+
+            <section class="card--large">
+                <figure class="card__item card__item--large">
                     <img src="assets/image-11.jpeg" alt="">
+                    <figcaption class="gallery__item--hover">
+                        <a href="#"><h3>Landing Page</h3></a>
+                    </figcaption>
+                </figure>
+                    
+                    <figure class="card__item card__item--large">
+                        <img src="assets/image-12.jpeg" alt="">
+                        <figcaption class="gallery__item--hover">
+                            <a href="#"><h3>Landing Page</h3></a>
+                        </figcaption>
                     </figure>
-                    </li>
-                <li class="card__item card__item--large">
-                    <figure>
-                    <img src="assets/image-12.jpeg" alt="">
+
+                    <figure class="card__item card__item--large">
+                        <img src="assets/image-13.jpeg" alt="">
+                        <figcaption class="gallery__item--hover">
+                            <a href="#"><h3>Landing Page</h3></a>
+                        </figcaption>
                     </figure>
-                </li>
-                <li class="card__item card__item--large">
-                <figure>
-                    <img src="assets/image-13.jpeg" alt="">
+
+                    <figure class="card__item card__item--large">
+                        <img src="assets/image-14.jpeg" alt="">
+                        <figcaption class="gallery__item--hover">
+                            <a href="#"><h3>Landing Page</h3></a>
+                        </figcaption>
                     </figure>
-                </li>
-                <li class="card__item card__item--large">
-                <figure>
-                    <img src="assets/image-14.jpeg" alt="">
-                    </figure>
-                </li>
-            </ul>
+            </section>
     </div>
 
     <footer>
@@ -172,7 +202,7 @@
             </section>
         
 
-            <section class="container container--footer">
+            <section class="container container--footer" id="aboutUs">
                 <h3 class="sectionTitle sectionTitle--small sectionTitle--left">About Us</h3>
                 <p class="paragraphText--left">We are creative and modern web studio. Newest technologies it’s about us. We keep up with time, your web site will contain all of the best and modern trends. We are making web since 2005. Huge experience - is a best helper.</p>
             </section>
@@ -189,9 +219,9 @@
                     <figure><img src="assets/image-21.jpeg" alt="an old-school red car"></figure>
                     <figure><img src="assets/image-22.jpeg" alt="some colourful homes along a street"></figure>
                 <div class="container--social">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-pinterest-p"></i></a>
                 </div>
 
             </section>
@@ -201,7 +231,6 @@
             <section class="container--footer">
                     <h3 class="sectionTitle sectionTitle--small sectionTitle--header">Photography</h3>
             </section>
-
                     <ul class="nav__footer">
                         <li class="nav__link nav__link--footer"><a href="#">Home</a></li>
                         <li class="nav__link nav__link--footer"><a href="#">Demos</a></li>
@@ -214,8 +243,31 @@
             </section>
         </div>
         <section class="copyright">
-            <p>2017 All rights resrved ©</p>
+            <p>2017 All rights reserved ©</p>
         </section>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+
+        <script>
+            $(function(){
+
+                $('.hamburger').on('click', function(){
+            
+                $('.menu').addClass('show');
+
+                });
+
+                $('.exit-responsive').on('click', function(){
+
+                    $('.menu').removeClass('show');
+                });
+
+                $('a').smoothScroll({
+                    speed: 800
+                });
+            });
+        </script>
 </body>
 </html>
 
