@@ -20,7 +20,7 @@ img {
 
 
 header {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../assets/image-1.jpeg) fixed no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(../assets/image-1.jpeg) fixed no-repeat;
     background-size: cover;
     height: 100vh;
 }
@@ -40,6 +40,14 @@ header {
     .btn {
         margin-top: 0;
     }
+}
+
+.hamburger, .exit-responsive {
+	display: none;
+}
+
+.show.hamburgerMenu {
+	display: block;
 }
 
 .header__title {
@@ -76,6 +84,7 @@ i {
 
 a {
     text-decoration: none;
+    width: 100%;
 }
 
 nav h3 {
@@ -90,7 +99,6 @@ nav h3 {
 
 .wrapper--header {
     display: flex;
-    padding-top: 20px;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -158,7 +166,7 @@ nav h3 {
 }
 
 .wrapper h3 {
-    margin-top: 0;
+    margin-top: 15px;
 }
 
 .nav {
@@ -385,10 +393,19 @@ nav {
 
 .galleryLinks__item {
     padding: 10px 0;
+
+    &:hover {
+        background-color: black;
+    }
 }
 
 .galleryLinks__item a {
     color: white;
+
+    &:hover {
+        color: gold;
+        transition: 0.2s all ease;
+    }
 }
 
 .container--footer {
@@ -417,6 +434,11 @@ nav {
 }
 .container--social i {
     font-size: 1.6rem;
+
+    &:hover {
+        color: gold;
+        transition: 0.2s all ease;
+    }
 }
 
 .container--social a {
@@ -439,11 +461,15 @@ nav {
 }
 
 .fa-camera:hover {
-    color: blue;
+    color: white;
 }
 
 .fa-heart:hover {
     color: red;
+}
+
+.fa-bars, .fa-times {
+    color: gold;
 }
 
 form {
@@ -487,6 +513,10 @@ input {
 
 .nav__link--footer {
     padding: 20px;
+
+    a:hover {
+        color: gold;
+    }
 }
 
 .copyright {
@@ -519,9 +549,48 @@ input {
 
 @media (max-width: 668px) {
 
+    header {
+        background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../assets/image-1.jpeg) fixed no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .hamburgerMenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: black;
+        color: white;
+        height: 100vh;
+        z-index: 1;
+        width: 100%;
+    }
+    
+    .hamburger, .exit-responsive {
+        display: block;
+        font-size: 5rem;
+    }
+
+    .hamburger {
+        position: absolute;
+        top: -10%;
+        right: 5%;
+        position: fixed;
+        z-index: 1000;
+    }
+    
+    .sectionTitle--header {
+        display: none;
+    }
 
     .header {
         top: 100%;
+        bottom: 0%;
+        left: 0;
+        right: 0;
     }
 
     .wrapper--left {
@@ -530,13 +599,15 @@ input {
     }
 
     .wrapper__text {
+        width: 85%;
         text-align: left;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     .container {
         flex-wrap: nowrap;
         width: 100%;
+        padding: 40px 0;
     }
 
     .container--left {
@@ -547,17 +618,25 @@ input {
 
     .wrapper {
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        position: relative;
+        top: 25%;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery__item {
+        width: 100%;
     }
 
     .galleryLinks {
-        width: 105%;
+        width: 100%;
     }
     
     .container--footer {
         align-items: center;
-        width: 90%;
     }
 
     .testimonial--figure {
@@ -572,8 +651,8 @@ input {
     }
 
     .header__title {
-        text-align: center;
-        justify-content: center;
+        text-align: left;
+        justify-content: flex-start;
         color: white;
     }
 
@@ -587,16 +666,31 @@ input {
     }
 
     .header .btn:hover {
-        background-color: red;
+        background-color: gold;
     }
 
-    .wrapper {
-        padding-top: 0;
-        position: relative;
+    .card {
+        margin: 0;
     }
 
     .card__item {
         text-align: center;
+        padding: 15px 0;
+    }
+
+    // .card__item--large {
+    //     width: 10%;
+    // }
+
+    .card--large {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container__text--border {
+        width: 75%;
     }
 
     .aboutUs {
@@ -604,18 +698,14 @@ input {
     }
 
     .container--social {
-        flex-direction: row;
-        position: relative;
-        justify-content: flex-start;
-
+        display: none;
     }
 
     .nav {
         flex-direction: column;
         text-align: center;
         align-items: center;
-        margin-top: 3%;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .nav a:hover {
@@ -623,13 +713,29 @@ input {
         transition: 0.2s all ease;
     }
 
-    .nav__link a{
+    .nav__link {
+        width: 100%;
+    }
+
+    .nav__link a {
         color: white;
     }
 
     .sectionTitle--left {
         text-align: center;
     }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container--instagram figure {
+        width: calc(100% / 4);
+        padding: 15px;
+    }
+
 
     .nav__link--footer a {
         color: black;

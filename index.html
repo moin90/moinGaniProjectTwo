@@ -14,13 +14,15 @@
         <div class="wrapper wrapper--header">
         <div class="headerNavigation">
             <h3 class="sectionTitle sectionTitle--small sectionTitle--header">Photography</h3>
-            <nav>   
+            <p class="hamburger"><a href="#"><i class="fas fa-bars"></i></a></p>
+            <nav class="hamburgerMenu">   
                 <ul class="nav">
+                    <li class="exit-responsive"><a href="#"><i class="fas fa-times"></i></a></li>
                     <li class="nav__link"><a href="#">Home</a></li>
                     <li class="nav__link"><a href="#gallery">Gallery</a></li>
-                    <li class="nav__link"><a href="#">Blog</a></li>
-                    <li class="nav__link"><a href="#">Bookings</a></li>
-                    <li class="nav__link"><a href="#">About Us</a></li>
+                    <li class="nav__link"><a href="#aboutUs">Blog</a></li>
+                    <li class="nav__link"><a href="#aboutUs">Bookings</a></li>
+                    <li class="nav__link"><a href="#aboutUs">About Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,7 +30,7 @@
         <section class="header">
             <div class="wrapper wrapper--header">
             <h1 class="sectionTitle header__title">Welcome</h1>
-            <p class="header__text">To My Photography Website</p>
+            <h2 class="header__text">To My Photography Website</h2>
             <a href="#welcome"><button class="btn">Start</button></a>
             </div>
         </section>
@@ -165,7 +167,7 @@
     
     <div class="wrapper">
         <ul class="galleryLinks">
-                <li class="galleryLinks__item"><a href="#"></a>Latest Shoots</a></li>
+                <li class="galleryLinks__item"><a href="#">Latest Shoots</a></li>
                 <li class="galleryLinks__item"><a href="#">All</a></li>
                 <li class="galleryLinks__item"><a href="#">Weddings</a></li>
                 <li class="galleryLinks__item"><a href="#">Scenery</a></li>
@@ -224,8 +226,7 @@
                 </ul>
             </section>
         
-
-            <section class="container container--footer">
+            <section class="container container--footer" id="aboutUs">
                 <h3 class="sectionTitle sectionTitle--small sectionTitle--left">About Us</h3>
                 <p class="paragraphText--left aboutUsText">We are creative and modern web studio. Newest technologies it’s about us. We keep up with time, your web site will contain all of the best and modern trends. We are making web since 2005. Huge experience - is a best helper.</p>
             </section>
@@ -246,9 +247,8 @@
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-pinterest-p"></i></a>
                 </div>
-
             </section>
-             </div>
+                </div>
 
             <div class="photography">
             <section class="container--footer">
@@ -280,11 +280,11 @@
                 });
 
                 $('.hamburger').on('click', function () {
-                    $('.menu').addClass('show');
+                    $('.hamburgerMenu').addClass('show');
                 });
 
                 $('.exit-responsive').on('click', function () {
-                    $('.menu').removeClass('show');
+                    $('.hamburgerMenu').removeClass('show');
                 });
         });
 
