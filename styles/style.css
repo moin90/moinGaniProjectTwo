@@ -164,6 +164,8 @@ header {
   position: absolute;
   right: 11%;
   top: 30%; }
+  .header .btn {
+    margin-top: 0; }
 
 .header__title {
   font-size: 3.5rem; }
@@ -208,8 +210,7 @@ nav h3 {
   display: -ms-flexbox;
   display: flex;
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 0; }
+  margin: 0 auto; }
 
 .wrapper--header {
   display: -webkit-box;
@@ -260,7 +261,8 @@ nav h3 {
   text-align: center;
   padding: 10px;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 700;
+  width: 60%; }
 
 .sectionTitle {
   text-transform: uppercase;
@@ -334,12 +336,12 @@ nav {
   text-align: center;
   border-radius: 1.5rem;
   padding: 5px;
-  margin-bottom: 100px;
   width: 125px;
   border: solid black 1px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2.5px; }
+  letter-spacing: 2.5px;
+  margin-top: 20px; }
   .btn:hover {
     background-color: gold;
     -webkit-transition: 0.2s all ease;
@@ -368,7 +370,8 @@ nav {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 66.66%; }
+  width: 66.66%;
+  margin-top: 60px; }
 
 .card__item {
   text-align: left;
@@ -418,7 +421,8 @@ nav {
   text-align: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+  padding: 60px 0; }
 
 .container--left {
   display: -webkit-box;
@@ -496,7 +500,8 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 33.33%; }
+  width: 33.33%;
+  margin-top: 60px; }
 
 .galleryLinks__item {
   padding: 25px 15px; }
@@ -586,7 +591,8 @@ button {
 
 input {
   border: 1px solid black;
-  border-right: none; }
+  border-right: none;
+  padding: 10px; }
 
 .nav__footer {
   display: block;
@@ -636,6 +642,15 @@ input {
   background: black;
   width: 100%;
   font-weight: 700; }
+
+.contact {
+  text-align: left;
+  width: 100%; }
+  .contact i {
+    padding-right: 10px; }
+
+.aboutUsText {
+  width: 80%; }
 
 @media (max-width: 668px) {
   .header {

@@ -29,7 +29,7 @@
             <div class="wrapper wrapper--header">
             <h1 class="sectionTitle header__title">Welcome</h1>
             <p class="header__text">To My Photography Website</p>
-            <button class="btn">Start</button>
+            <a href="#welcome"><button class="btn">Start</button></a>
             </div>
         </section>
 
@@ -37,9 +37,11 @@
     </header>
 
     <div class="wrapper wrapper--center">
-        <h2 class="sectionTitle sectionTitle--large">Welcome to <span class="sectionTitle--blue">Photography</span></h2>
-        <p class="wrapper__text">Suspendisse convallis turpis sem, nec tincidunt mauris tincidunt sed. Nunc vulputate feli s eu nunc moletie molestie vel tempus purus. Donec sed tellus mi. Fusce tincidunt tudin arcu, nec fringilla ex he rerit eget. Maecenas fringilla neque eu est tincon. Vivamus consequa variusimperdiet. Mauris laoreet risus pharetra ollis.</p>
-        <button class="btn">More</button>
+        <section class="container" id="welcome">
+            <h2 class="sectionTitle sectionTitle--large">Welcome to <span class="sectionTitle--blue">Photography</span></h2>
+            <p class="wrapper__text">Suspendisse convallis turpis sem, nec tincidunt mauris tincidunt sed. Nunc vulputate feli s eu nunc moletie molestie vel tempus purus. Donec sed tellus mi. Fusce tincidunt tudin arcu, nec fringilla ex he rerit eget. Maecenas fringilla neque eu est tincon. Vivamus consequa variusimperdiet. Mauris laoreet risus pharetra ollis.</p>
+            <button class="btn">More</button>
+        </section>
     </div>
 
     <section class="container container--olive">
@@ -175,8 +177,8 @@
 
     <footer>
         <div class="wrapper">
-            <section class="container--footer">
-                <ul>
+            <section class="container container--footer">
+                <ul class="contact">
                     <h3 class="sectionTitle sectionTitle--small sectionTitle--left">Contact</h3>
                     <li class=""><i class="far fa-envelope icon--small"></i>info@delicate.com</li>
                     <li class=""><i class="fas fa-phone icon--small"></i>123 456-7890</li>
@@ -193,10 +195,10 @@
 
             <section class="container container--footer">
                 <h3 class="sectionTitle sectionTitle--small sectionTitle--left">About Us</h3>
-                <p class="paragraphText--left">We are creative and modern web studio. Newest technologies it’s about us. We keep up with time, your web site will contain all of the best and modern trends. We are making web since 2005. Huge experience - is a best helper.</p>
+                <p class="paragraphText--left aboutUsText">We are creative and modern web studio. Newest technologies it’s about us. We keep up with time, your web site will contain all of the best and modern trends. We are making web since 2005. Huge experience - is a best helper.</p>
             </section>
 
-            <section class="container--footer">
+            <section class="container container--footer">
                     <h3 class="sectionTitle sectionTitle--small">Instagram</h3>
                 <div class="container--instagram">
                     <figure><img src="assets/image-15.jpeg" alt="a boat in water"></figure>
@@ -221,17 +223,15 @@
                     <h3 class="sectionTitle sectionTitle--small sectionTitle--header">Photography</h3>
             </section>
 
-                    <ul class="nav__footer">
-                        <li class="nav__link nav__link--footer"><a href="#">Home</a></li>
-                        <li class="nav__link nav__link--footer"><a href="#">Demos</a></li>
-                        <li class="nav__link nav__link--footer"><a href="#">Blog</a></li>
-                        <li class="nav__link nav__link--footer"><a href="#">Pages</a></li>
-                        <li class="nav__link nav__link--footer aboutUs"><a href="#">About Us</a></li>
-                    </ul>
-                </div>
-                
-            </section>
+            <ul class="nav__footer">
+                <li class="nav__link nav__link--footer"><a href="#">Home</a></li>
+                <li class="nav__link nav__link--footer"><a href="#">Demos</a></li>
+                <li class="nav__link nav__link--footer"><a href="#">Blog</a></li>
+                <li class="nav__link nav__link--footer"><a href="#">Pages</a></li>
+                <li class="nav__link nav__link--footer aboutUs"><a href="#">About Us</a></li>
+            </ul>
         </div>
+                
         <section class="copyright">
             <p>2017 All rights reserved ©</p>
         </section>
