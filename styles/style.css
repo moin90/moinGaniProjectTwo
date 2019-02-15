@@ -137,7 +137,12 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Catamaran', sans-serif; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%; }
 
 header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../assets/image-1.jpeg) fixed no-repeat;
@@ -169,7 +174,7 @@ header {
     margin-top: 0; }
 
 .header__title {
-  font-size: 3.5rem; }
+  font-size: 6rem; }
 
 .header__text {
   margin-top: 0; }
@@ -267,7 +272,6 @@ nav h3 {
 
 .sectionTitle {
   text-transform: uppercase;
-  font-family: 'Catamaran', sans-serif;
   padding: 0;
   margin: 0;
   text-align: center; }
@@ -381,8 +385,28 @@ nav {
     color: #285d64; }
 
 .card__item--large {
-  width: calc(50% - 10px);
-  margin: 5px; }
+  width: calc(50% - 5px);
+  padding: 5px;
+  position: relative; }
+  .card__item--large figure:hover .gallery__overlay {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 .card__item--blue {
   color: #285d64;
@@ -458,13 +482,41 @@ nav {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap; }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: 100%; }
+.gallery__overlay {
+  display: none;
+  background: rgba(42, 42, 42, 0.8);
+  color: white;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .gallery__overlay h3 {
+    text-transform: uppercase; }
 
 .gallery__item {
-  width: calc(100% / 4); }
+  width: calc(100% / 4);
+  position: relative; }
+  .gallery__item:hover .gallery__overlay {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 .container--left {
   display: -webkit-box;
@@ -495,14 +547,13 @@ img {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  padding: 20px 20px 50px;
   margin-right: 15px;
   font-weight: 700;
   width: 33.33%;
   margin-top: 60px; }
 
 .galleryLinks__item {
-  padding: 25px 15px; }
+  padding: 10px 0; }
 
 .galleryLinks__item a {
   color: white; }
@@ -642,14 +693,14 @@ input {
   font-weight: 700; }
 
 .contact {
-  text-align: left;
-  width: 100%; }
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  text-align: left; }
   .contact i {
     padding-right: 10px; }
 
 .aboutUsText {
-  width: 80%;
-  font-family: 'Catamaran', sans-serif; }
+  width: 80%; }
 
 @media (max-width: 668px) {
   .header {
